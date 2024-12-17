@@ -1,0 +1,164 @@
+header {
+    position: sticky;
+    background-color: var(--white);
+    z-index: 999;
+    top: 0;
+    box-shadow: 20px 20px 60px #d8d8d8,
+        -20px -20px 60px #ffffff;
+}
+
+header #header-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+header #logo-container {
+    padding: 6px 10px;
+}
+
+#logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+header #logo-container h3 {
+    white-space: nowrap;
+}
+
+.exo-2-logo-font {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    margin: 0;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    display: inline;
+    list-style: none;
+    margin: 10px 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+header ul li a:hover {
+    background-color: var(--arca-red);
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+#logo-container:hover{
+    /* border: 1px solid black;
+    box-sizing: border-box; */
+}
+
+#logo-container:hover h3 {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+#login, #logout {
+    padding: 3px 15px;
+    background-color: var(--arca-red);
+    color:white;
+    border: 1px solid black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#login:hover, #logout:hover {
+    background-color: black;
+    color: var(--arca-red);
+    transition: all 0.5s ease;
+}
+
+.menu-collapse-btn {
+    display: none;
+    height: 30px;
+    margin-left: 10px;
+    padding: 0 3px;
+    border: 1px solid black;
+
+}
+
+.menu-collapse-btn img {
+    height: 28px;
+    color: black;
+    fill: currentColor;
+}
+
+.login-font {
+    font-size: 20px;
+}
+
+#buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+#menu-toggle:checked ~ #menu {
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+#menu-toggle:checked ~ .menu-collapse-btn .close-menu {
+    display: block;
+    transition: all 0.5s ease;
+}
+
+#menu-toggle:checked ~ .menu-collapse-btn .hamburger-menu {
+    display: none;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+    
+    #menu {
+        position: absolute;
+        top: 74px;
+        right: -130px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid black;
+        transition: all 0.5s ease;
+    }
+
+    #menu li:nth-child(2) a {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    #menu ul {
+        flex-direction: column;
+    }
+
+    .menu-collapse-btn {
+        display: flex;        
+    }
+
+    header #header-container {
+        width: 90%;
+        flex: 1;
+    }
+
+}
